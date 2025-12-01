@@ -1,28 +1,81 @@
-# AI Room Booking Chatbot
+AI Room Booking Chatbot
 
-## Demo
+A simple AI-powered room booking assistant built using IBM Watson Assistant and IBM Cloud Functions.
+This project demonstrates how to automate room reservation requests and trigger email notifications using serverless functions.
 
-![AI Room booking chatbot - Demo](demo.gif)
+Features
 
+Conversational room booking chatbot
 
-### Instruction
+Automated booking confirmation email
 
-Download or Clone this repo on your local machine
+Serverless backend (IBM Cloud Functions)
 
-1. Create your IBM Cloud Account at https://cloud.ibm.com/registration If you already have an IBM Cloud Account, login here https://cloud.ibm.com/login
-2. Provision your IBM Watson Assistant at https://cloud.ibm.com/catalog/services/watson-assistant Name your IBM Watson Assistant service and Click on create.
-3. Click on launch Watson Assitant to open the tool.
-4. Then Click on "Create assistant" Button to create your IBM Watson Assistant.
-5. Name your assistant. If you want, you can give description for ypur assistant.
-6. Click on "Add an actions or dialog skill"
-7. Go to "upload skill" tab and choose the [skill-Room-Booking.json](skill-Room-Booking.json)
-8. We completed the chatbot. Let's set our IBM Cloud Function to send an email when someone sends a booking request. Go to https://cloud.ibm.com/functions/actions and Click on "Create" Button and click on "Action"
-9. Prove a name for your Action. Leave "Enclosing Package" as default. And Choose python 3.7 as your runtime. Then Finally, Click on "Create".
-10. You will see a Text area to enter your python code. Just copy the python from [IBM_Cloud_Function.py](IBM_Cloud_Function.py) and past it in the text area of IBM Cloud Funtion.
-11. Now go to your Google Account Security at https://myaccount.google.com/security. Enable 2 step verification. Then Go to "App password" under "Signing in to Google".
-12. Select "Mail" as app and "Other" as "Other" as device. Enter any name for your custom device. example: IBM Cloud Fumction
-13. Copy the app password and back to our IBM Cloud Function. Enter the app password in the python program on 10 line.
-14. Click on "Endponits" from the side bar of IBM Cloud Function Action Click on "Enable as Web Action" and Copy the URL.
-15. Come Back to your IBM Watson Assistant. Go to "Option > Webhooks" from the side bar of your IBM Watson Assistant. Then past the URL (Note: Add .json at the end of the URL).
+Easy to deploy and customize
 
-That's it. We have successfully developed our AI Room Booking Chatbot.
+How to Run the Project
+1. Download the Project
+
+Clone or download the repository to your local system.
+
+2. Set Up IBM Watson Assistant
+
+Create or sign in to your IBM Cloud account.
+
+Provision a Watson Assistant service instance.
+
+Open Watson Assistant and create a new assistant.
+
+Add a new Actions/Dialog skill.
+
+Upload the provided skill-Room-Booking.json file.
+
+Your chatbot configuration is now ready.
+
+3. Configure the Email Automation
+
+This project includes a cloud function that sends an email whenever a room booking request is submitted.
+
+Steps
+
+Create a new IBM Cloud Function action.
+
+Select Python 3.7 as the runtime environment.
+
+Paste the code from IBM_Cloud_Function.py into the action editor.
+
+Enable 2-step verification in your Google Account.
+
+Generate an App Password under App Passwords in the Security section.
+
+Replace the email password in the cloud function code with your generated app password.
+
+4. Expose the Cloud Function
+
+Open the Endpoints tab of your cloud function.
+
+Enable Web Action.
+
+Copy the generated endpoint URL.
+
+5. Connect the Chatbot With the Cloud Function
+
+In Watson Assistant, go to Options → Webhooks.
+
+Paste the cloud function URL.
+
+Add .json at the end of the URL.
+
+Your room booking chatbot is now fully connected and functional.
+
+6. Ready to Use
+
+The chatbot can now:
+
+Take booking requests
+
+Trigger email notifications
+
+Process responses automatically
+
+You can customize intents, actions, email formatting, or integrate additional logic based on your requirements.
